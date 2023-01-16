@@ -20,7 +20,8 @@ body <- dashboardBody(
     ),
     
     tabItem(tabName = "table",
-            h3("Table works")
+            h3("Poland Species"),
+            DT::dataTableOutput(outputId = "speciesTable")
     ),
     
     tabItem(tabName = "map",
