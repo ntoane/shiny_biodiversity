@@ -1,4 +1,3 @@
-names <- c('Name 1', 'Name 2', 'Name 3', 'Name 4', 'Name 5')
 # Define the sidebar menu items
 sidebar <- dashboardSidebar(
   sidebarMenu(
@@ -30,8 +29,7 @@ body <- dashboardBody(
             fluidRow(
               box(
                 title = "Inputs", status = "success",
-                selectInput("vernacular_name", "Search for species by their vernacularName and scientificName", 
-                            names, multiple = TRUE)
+                uiOutput("select_species")
               )
             ),
             

@@ -1,5 +1,5 @@
 server <- function(input, output, session) {
-  # Get the data
+  # Get the table data
   table_data <- reactive({
     # Use few columns for table
     columns <- c('locality', 'scientificName', 'vernacularName', 'sex', 'kingdom', 'family', 'higherClassification', 'longitudeDecimal', 'latitudeDecimal')
@@ -12,28 +12,19 @@ server <- function(input, output, session) {
   })
   
   # Visualization on map
-  
-  # Render Histogram data
-  output$histogram <- renderPlot({
-    hist(faithful$eruptions)
+  # Get data
+  get_data <- reactive({
+    get_data <- data
   })
   
-  usaLat <- 36.5588659
-  usaLon <- -107.6660877
-  usaZoom <- 3
-  
-  map_data <- reactive({
-    data %>%
-      filter(scientificName %in% input$inputSpecies) %>%
-      mutate(INFO = paste0(scientificName, ", ", vernacularName))
-  })
-  
-  # Render leaflet map
-  #output$leafletMap <- renderLeaflet({
-   # leaflet(data = map_data()) %>%
-    #  setView(lat = usaLat, lng = usaLon, zoom = usaZoom) %>%
-     # addTiles() %>%
-      #addMarkers(~longitudeDecimal, ~latitudeDecimal, popup = ~INFO, label = ~INFO) %>%
-      #addProviderTiles(providers$Esri.WorldStreetMap)
-  #})
+  # Render UI for selecting Scientific or Vernacular name
+  output$select_species <- renderUI(
+    selectizeInput(inputId = "species_name", 
+               label = "Select Scientific or Vernacular Name",
+               selected = c("Alces alces", "Cygnus olor"),
+               choices = c(get_data()["scientificName"], get_data()["vernacularName"]),
+               multiple = TRUE
+    )
+    
+  )
 }
