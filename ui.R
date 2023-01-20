@@ -39,8 +39,8 @@ body <- dashboardBody(
                 leafletOutput(outputId = "leafletMap")
                 ),
               box(
-                title = "Histogram of selected species", status = "success",
-                plotOutput("histogram")
+                title = "Timeline of when selected species were observed", status = "success",
+                plotlyOutput("timeline")
                 )
             )
     )

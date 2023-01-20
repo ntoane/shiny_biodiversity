@@ -30,7 +30,7 @@ server <- function(input, output, session) {
   # Filter the data by scientificName or vernacularName
   filter_data <- eventReactive(input$species_name, {
     validate(
-      need(input$species_name, "Please select Vernacular name or Scientific name to visualize them on the map here")
+      need(input$species_name, "Please select Vernacular name or Scientific name to visualize them here")
     )
     
     filter_data <- dplyr::filter(get_data(),get_data()$scientificName %in% input$species_name | 
@@ -59,5 +59,28 @@ server <- function(input, output, session) {
     addMarkers(lat = filter_data$latitudeDecimal, 
                lng = filter_data$longitudeDecimal,
                popup = filter_data$popup_features)
+  })
+  
+  # Display a timeline when selected species were observed
+  output$timeline <- renderPlotly({
+    #input_data
+    filter_data <- filter_data()
+    
+    # Load the event date
+    date <- as.Date(filter_data$eventDate, "%m/%d/%y")
+
+    # Display time line with plotly
+    p <- ggplot(filter_data, aes(x=date, y=individualCount, 
+                                 fill=locality, size=2, col=family, shape=kingdom, group=scientificName))
+    p <- p + labs(title="Timeline of selected species", x="Year", y="Number of occurrences")
+    p <- p + geom_point(alpha = 0.5)
+    p <- p + scale_x_date(date_breaks="1 year", date_labels = "%Y")
+    p <- p + theme_bw()
+    p <- p + theme(legend.position="none")
+    p <- p + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+    
+    # Plot data using plotly
+    fig <- plotly::ggplotly(p)
+    
   })
 }
