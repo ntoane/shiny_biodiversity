@@ -31,9 +31,6 @@ The following functionalities have been implemented beyond the basic requirement
 #### JavaScript skill
 - Pop features of species on the map
 
-#### Infrastructure skill
-- Deployment of the app on AWS
-
 # Authors
 Lekuba Ntoane - 2023
 
