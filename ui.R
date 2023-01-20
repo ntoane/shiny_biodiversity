@@ -1,5 +1,6 @@
 # Define the sidebar menu items
 sidebar <- dashboardSidebar(
+  color = "green",
   sidebarMenu(
     menuItem("Home", tabName = "home", icon = icon("home")),
     menuItem("Tabulate Species", tabName = "table", icon = icon("table")),
@@ -47,7 +48,7 @@ body <- dashboardBody(
   )
 )
 
-ui <- dashboardPage(skin = "green", title = "Appsilon | Poland Biodiversity",
+ui <- dashboardPage(title = "Appsilon | Poland Biodiversity",
   dashboardHeader(title = tags$b("Poland Biodiversity")),
   sidebar,
   body

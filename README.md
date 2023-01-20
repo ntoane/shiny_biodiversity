@@ -12,15 +12,6 @@ The UI is based on ***shinydashboard*** library. It is deployed on shinyapps.io,
 ## Demo 2
 Demo 2 extends the functionalities of Demo 1 by using ***semantic.dashboard*** library and deployed on AWS, found on this link:
 
-## Package requirements
-- Shiny 1.7.4
-- shinydashboard 0.7.2
-- dplyr 1.0.10
-- DT 0.26
-- leaflet 2.1.1
-- plotly 4.10.1
-- shinytest2 0.2.0
-
 ## Install these packages
 - Shiny 1.7.4
 - shinydashboard 0.7.2
@@ -35,12 +26,6 @@ The following functionalities have been implemented beyond the basic requirement
 
 #### Beautiful UI skill
 - shinydashboard and semantic.dashboard
-
-#### JavaScript skill
--Pop features of species on the map
-
-#### Infrastructure skill
-- Deployment of the app on AWS
 
 #### JavaScript skill
 - Pop features of species on the map
