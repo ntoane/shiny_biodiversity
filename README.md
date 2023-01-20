@@ -20,6 +20,7 @@ Demo 2 extends the functionalities of Demo 1 by using ***semantic.dashboard*** l
 - leaflet 2.1.1
 - plotly 4.10.1
 - shinytest2 0.2.0
+- semantic.dashboard 0.2.1
 
 ## Extras 
 The following functionalities have been implemented beyond the basic requirements of this assignment
