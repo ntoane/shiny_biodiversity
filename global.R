@@ -5,7 +5,7 @@ library(DT)
 library(leaflet)
 library(dplyr)
 library(plotly)
-library(scales)
+library(shinytest2)
 
 # Read Poland biodiversity data
 data <- read.csv("./data/poland_data.csv", header=TRUE, stringsAsFactors=FALSE)
