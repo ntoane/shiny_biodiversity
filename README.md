@@ -22,12 +22,13 @@ Demo 2 extends the functionalities of Demo 1 by using ***semantic.dashboard*** l
 - plotly 4.10.1
 - shinytest2 0.2.0
 - semantic.dashboard 0.2.1
+- shinycssloaders
 
 ## Extras 
 The following functionalities have been implemented beyond the basic requirements of this assignment
 
 #### Beautiful UI skill
-- shinydashboard and semantic.dashboard
+- shinydashboard, semantic.dashboard and shinycssloaders
 
 #### JavaScript skill
 - Pop features of species on the map
