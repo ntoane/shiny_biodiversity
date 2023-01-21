@@ -10,7 +10,8 @@ The UI is based on ***shinydashboard*** library. It is deployed on shinyapps.io,
 [https://ntoane.shinyapps.io/shiny_biodiversity/](https://ntoane.shinyapps.io/shiny_biodiversity/)
 
 ## Demo 2
-Demo 2 extends the functionalities of Demo 1 by using ***semantic.dashboard*** library and deployed on AWS, found on this link:
+Demo 2 extends the functionalities of Demo 1 by using ***semantic.dashboard*** library and deployed on AWS, found on this link:  
+[http://3.238.185.183/shiny_biodiversity/](http://3.238.185.183/shiny_biodiversity/)
 
 ## Install these packages
 - Shiny 1.7.4
@@ -30,6 +31,9 @@ The following functionalities have been implemented beyond the basic requirement
 
 #### JavaScript skill
 - Pop features of species on the map
+
+#### Infrastructure skill
+- Deployment of the app on AWS
 
 # Authors
 Lekuba Ntoane - 2023

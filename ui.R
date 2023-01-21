@@ -30,18 +30,19 @@ body <- dashboardBody(
             fluidRow(
               box(
                 title = "Inputs", status = "success",
-                uiOutput("select_species")
+                #uiOutput("select_species")
+                withSpinner(uiOutput("select_species"), type = 5, color = "green", size = 1)
               )
             ),
             
             fluidRow(
               box(
                 title = "Visualization of selected species on the map", status = "success",
-                leafletOutput(outputId = "leafletMap")
+                withSpinner(leafletOutput(outputId = "leafletMap"), type = 1, color = "green", size = 1)
                 ),
               box(
                 title = "Timeline of when selected species were observed", status = "success",
-                plotlyOutput("timeline")
+                withSpinner(plotlyOutput("timeline"), type = 8, color = "green", size = 1)
                 )
             )
     )
