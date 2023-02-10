@@ -4,14 +4,8 @@ This Shiny dashboard app visualizes Poland observed species on the map. The orig
 [Global Biodiversity Information Facility](https://www.gbif.org/occurrence/search?dataset_key=8a863029-f435-446a-821e-275f4f641165) and covers the whole world,
 but only observations from Poland are used.
 
-## Demo 1
-Demo 1 covers the requirements of the assignment and include extra JavaScript pop features.
-The UI is based on ***shinydashboard*** library. It is deployed on shinyapps.io, found on this link:  
+## Demo
 [https://ntoane.shinyapps.io/shiny_biodiversity/](https://ntoane.shinyapps.io/shiny_biodiversity/)
-
-## Demo 2
-Demo 2 extends the functionalities of Demo 1 by using ***semantic.dashboard*** library and deployed on AWS, found on this link:  
-[http://3.238.185.183/shiny_biodiversity/](http://3.238.185.183/shiny_biodiversity/)
 
 ## Install these packages
 - Shiny 1.7.4
@@ -23,24 +17,6 @@ Demo 2 extends the functionalities of Demo 1 by using ***semantic.dashboard*** l
 - shinytest2 0.2.0
 - semantic.dashboard 0.2.1
 - shinycssloaders
-
-## Extras 
-The following functionalities have been implemented beyond the basic requirements of this assignment
-
-#### Beautiful UI skill
-- shinydashboard, semantic.dashboard and shinycssloaders
-
-#### JavaScript skill
-- Pop features of species on the map
-
-#### Infrastructure skill
-- Deployment of the app on AWS
-
-# Authors
-Lekuba Ntoane - 2023
-
-# License
-No licence
 
 
 
