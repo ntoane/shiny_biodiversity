@@ -1,8 +1,8 @@
-# Appsilon Biodiversity Shiny Dashboard App
+# Biodiversity Shiny Dashboard App
 This Shiny dashboard app visualizes Poland observed species on the map. The original data found 
 [here](https://drive.google.com/file/d/1l1ymMg-K_xLriFv1b8MgddH851d6n2sU/view?usp=sharing) comes from 
 [Global Biodiversity Information Facility](https://www.gbif.org/occurrence/search?dataset_key=8a863029-f435-446a-821e-275f4f641165) and covers the whole world,
-but only observations from Poland are used.
+but only observations from Poland are used. It uses semantic.dashboard.
 
 ## Demo
 [https://ntoane.shinyapps.io/shiny_biodiversity/](https://ntoane.shinyapps.io/shiny_biodiversity/)

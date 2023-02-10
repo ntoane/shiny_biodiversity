@@ -49,7 +49,7 @@ body <- dashboardBody(
   )
 )
 
-ui <- dashboardPage(title = "Appsilon | Poland Biodiversity",
+ui <- dashboardPage(title = "Poland Biodiversity",
   dashboardHeader(title = tags$b("Poland Biodiversity")),
   sidebar,
   body
